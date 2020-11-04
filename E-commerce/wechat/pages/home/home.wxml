@@ -5,10 +5,11 @@
             indicator-active-color="#157658"
             autoplay
             circular>
-        <block wx:for="{{bannerB.items}}">
+        <block wx:for="{{bannerB.items}}" wx:key="index">
             <swiper-item>
                 <image data-type="{{item.type}}" data-keyword="{{item.keyword}}" bind:tap="onGoToBanner" class="swiper" src="{{item.img}}"></image>
             </swiper-item>
         </block>
     </swiper>
+    <s-category-grid grid="{{grid}}"></s-category-grid>
 </view>

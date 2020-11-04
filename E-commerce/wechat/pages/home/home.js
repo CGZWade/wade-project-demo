@@ -1,5 +1,6 @@
 import {Theme} from "../../models/theme";
 import {Banner} from "../../models/banner";
+import {Category} from "../../models/category";
 
 
 Page({
@@ -8,7 +9,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        themeA: null
+        themeA: null,
+        bannerB: null,
+        grid: []
     },
 
     /**
@@ -24,13 +27,14 @@ Page({
     async initAllData() {
         const theme = new Theme()
         await theme.getThemes()
-
         const themeA = theme.getHomeLocationA()
         const bannerB = await Banner.getHomeLocationB()
+        const grid = await Category.getHomeLocationC()
 
         this.setData({
             themeA,
-            bannerB
+            bannerB,
+            grid
         })
     },
 
