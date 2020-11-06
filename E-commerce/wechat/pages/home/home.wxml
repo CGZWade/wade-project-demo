@@ -11,5 +11,6 @@
             </swiper-item>
         </block>
     </swiper>
-    <s-category-grid grid="{{grid}}"></s-category-grid>
+    <s-category-grid grid="{{gridC}}"></s-category-grid>
+    <image data-aname="a-2" bind:tap="onGoToCoupons" class="activity" src="{{activityD.entrance_img}}"></image>
 </view>
